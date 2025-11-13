@@ -1,0 +1,292 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  
+}
+/*----------------------------------------------------------------------------------------------------Header---------------------------------------------------------------------------------------------*/
+nav {
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid;
+    background-color: #F6F7F9;
+    padding: 1em;
+    position: sticky;
+}
+nav a{
+    text-decoration: none;
+    color: black;
+}
+a:hover{
+    cursor: pointer;
+    color: rgb(17, 196, 11);
+}
+header{
+    position: sticky;
+    top:0;
+}
+#logo {
+    width: 20px;
+    align-items: center;
+    height: 20px
+}
+
+header img {
+    width: 100px;
+    height: auto
+}
+
+nav div {
+    display: flex;
+    gap: 2em;
+    align-items: center;
+}
+/*-----------------------------------------------------------------------------------------------Principal---------------------------------------------------------------------------------------------*/
+main{
+    background-image: url(/img/FondoWeb2.png);
+    background-repeat: no-repeat;   /*No se repite la imagen*/
+    background-size: cover;         /*Cubre toda la pantalla*/
+    background-position: center;
+}
+.contacto4{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 5em;
+    gap: 2em;
+}
+button{
+    background-color: #161C2D;;
+    color: white;
+    padding: 1em;
+    border-radius: 6px;
+    cursor: pointer;
+    &:hover{
+        background-color: rgb(17, 196, 11);
+        color: black;
+    }
+}
+.ventassoporte4{
+    display: flex;
+    text-align: center;
+    padding: 2em;
+}
+.telfs4, .formulario4{
+    width: 100vh;
+    padding:2em ;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;   
+}
+form{
+    text-align: left;
+   width: 100%;
+   max-width: 500px;
+   gap: 1em;
+}
+
+input, textarea{
+    width: 100%;
+}
+.us4, .india4, .londres4{
+    border-left: 1px solid lightgray ;
+    padding: 1.25em 2em;
+    width: 600px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+.us4:hover, .us4.active, .india4:hover, .india4.active, .londres4:hover, .londres4.active {
+    background-color: white;
+    border:2px solid black;
+    transform: scale(1.05);
+}
+.oficinas4{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding: 2em;
+    gap: 2em;
+    .oficinasoficinas{
+        display: flex;
+        justify-content: space-around;
+        margin: 1rem;
+    }
+    .indiaoficinas4, .eeuuoficinas4{
+        max-width: 600px;
+        display: flex;
+        flex-direction: column;
+        text-align: left;
+        gap: 2em;
+    }
+}
+/*----------------------------------------------------------------------------------------------------FOOTER---------------------------------------------------------------------------------------------*/
+footer{
+    background-color: #161C2D;
+    display: flex;
+    flex-direction: column;
+    color: white;
+    padding: 2em;
+}
+.footerarriba1 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    p{
+        padding:0.5em;
+    }   
+}
+.contacto1 img{
+    width: 28px;
+    cursor: pointer;
+}
+.apps1 img{
+    cursor: pointer;
+}
+.footerabajo1{
+    padding: 3em 2em 2em 2em;
+    text-align: center;
+    border-top: solid rgba(211,211,211,0.3);
+    margin-top: 2em;
+}
+.boton1{
+    padding: 1em 2em ;
+    border-radius: 8px;
+    background-color: #161C2D;
+    border-color: white;
+    color: white;
+    font-size: 1em;;
+    &:hover{
+        cursor: pointer;
+        background-color:rgb(17, 196, 11) ;
+        color: black;
+    }
+}
+footer a{
+    text-decoration: none;
+    color: white;
+}
+
+/* --------------------------- TABLET --------------------------- */
+@media (max-width: 1024px) {
+
+  nav div {
+    gap: 1em;
+  }
+
+  header img {
+    width: 80px;
+  }
+
+  .contacto4 {
+    padding: 3em;
+  }
+
+  .ventassoporte4 {
+    padding: 1em;
+    gap: 2em;
+  }
+
+  .telfs4, 
+  .formulario4 {
+    width: 100%;
+    padding: 1em;
+  }
+
+  .us4, .india4, .londres4 {
+    width: 80%;
+    margin: 0 auto;
+  }
+
+  .oficinasoficinas {
+    gap: 3em;
+  }
+
+  .footerarriba1 {
+    gap: 2em;
+  }
+
+  .apps1 img {
+    width: 130px;
+  }
+}
+/* --------------------------- MOVIL --------------------------- */
+@media (max-width: 767px) {
+
+nav {
+    flex-direction: column;
+    text-align: center;
+    gap: 1em;
+}
+
+nav div {
+    flex-direction: column;
+    gap: 0.5em;
+}
+
+header img {
+    width: 70px;
+}
+header{
+    position: relative;
+    top:0;
+}
+.contacto4 {
+    padding: 2em;
+    text-align: center;
+}
+
+.ventassoporte4 {
+    flex-direction: column;
+    gap: 2em;
+    padding: 1em;
+}
+
+.telfs4, .formulario4 {
+    width: 100%;
+    padding: 1em;
+}
+
+form {
+    max-width: 100%;
+}
+
+input, textarea {
+    width: 100%;
+    font-size: 1em;
+}
+
+.us4, .india4, .londres4 {
+    width: 95%;
+    margin: 0 auto;
+}
+
+.oficinasoficinas {
+    flex-direction: column;
+    gap: 2em;
+}
+.indiaoficinas4, .eeuuoficinas4 {
+    max-width: 100%;
+    text-align: center;
+}
+
+
+.footerarriba1 {
+    flex-direction: column;
+    text-align: center;
+    gap: 1.5em;
+}
+
+.contacto1 img {
+    width: 22px;
+}
+
+.apps1 img {
+    width: 120px;
+}
+
+.footerabajo1 {
+    padding: 2em;
+    font-size: 0.9em;
+}
+}

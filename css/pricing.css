@@ -1,0 +1,152 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+body {
+    background-image: url(../img/FondoWeb2.png);
+    background-size: cover;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    background-color: #F6F7F9;
+    padding: 1em;
+    position: sticky;
+}
+
+nav a {
+    text-decoration: none;
+    color: black;
+}
+
+a:hover {
+    color: rgb(17, 196, 11);
+}
+
+
+header {
+    position: sticky;
+    top: 0;
+}
+
+#logo {
+    width: 20px;
+    align-items: center;
+    height: 20px
+}
+
+header img {
+    width: 100px;
+    height: auto
+}
+
+
+nav div {
+    display: flex;
+    gap: 2em;
+    align-items: center;
+
+}
+
+
+.contentpricing{
+    margin-left: 5%;
+    text-align: left;
+    margin-top: 2em;
+    display: flex;
+    flex-direction: row;
+    gap: 3em 4em;
+    justify-content: space-between;
+    min-height: 80vh;
+    max-width: 90%; 
+    h1{font-size: 14px;color: #007BFF;}
+    p{font-size: 11px;}
+    h2{color: #395073;font-size: 27px;}
+    .box{
+        box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+        border-radius: 12px;
+        padding: 1em;
+
+    .icon-contentpricing{
+        margin-top: 1em;
+        display: flex; 
+        p{padding-left: 1em;}
+        }
+    }
+    img{width: 15px;max-height: 14px;}
+
+}
+
+footer{
+    margin-top: 10em;
+    background-color: #161C2D;
+    display: flex;
+    flex-direction: column;
+    color: white;
+    padding: 2em;
+}
+.footerarriba1 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    p{padding:0.5em;}   
+}
+.contacto1 img{width: 28px;cursor:pointer;}
+
+.apps1 img{cursor: pointer;}
+
+.footerabajo1{
+    padding: 3em 2em 2em 2em;
+    text-align: center;
+    border-top: solid rgba(211,211,211,0.3);
+    margin-top: 2em;
+}
+.boton1{
+    padding: 1em 2em ;
+    border-radius: 8px;
+    background-color: #161C2D;
+    border-color: white;
+    color: white;
+    font-size: 1em;;
+    &:hover{
+        cursor: pointer;
+        background-color:rgb(17, 196, 11) ;
+        color: black;
+    }
+}
+footer a{
+    text-decoration: none;
+    color: white;
+} 
+@media only screen and (max-width: 600px) {
+
+    nav{
+        justify-content: space-between;
+    }
+#logo{
+    display: none;
+}
+#banner {
+    background-position: left;
+    background-size: cover;
+    height: 25vh
+}
+
+.icon-contentpricing{
+    display: none !important ;
+}
+
+
+.contentpricing{
+    flex-wrap: wrap;
+    width: 100%;
+    .box{
+        width: 100%;
+    }
+}
+   
+}

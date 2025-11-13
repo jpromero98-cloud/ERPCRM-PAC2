@@ -1,0 +1,183 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  
+}
+/*----------------------------------------------------------------------------------------------------Header---------------------------------------------------------------------------------------------*/
+nav {
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid;
+    background-color: #F6F7F9;
+    padding: 1em;
+    position: sticky;
+}
+nav a{
+    text-decoration: none;
+    color: black;
+}
+a:hover{
+    cursor: pointer;
+    color: rgb(17, 196, 11);
+}
+header{
+    position: sticky;
+    top:0;
+}
+#logo {
+    width: 20px;
+    align-items: center;
+    height: 20px
+}
+
+header img {
+    width: 100px;
+    height: auto
+}
+
+nav div {
+    display: flex;
+    gap: 2em;
+    align-items: center;
+}
+/*---------------------------------------------------------------------------------Contenido central----------------------------------------------------------------------------------------------------*/
+main{
+    background-image: url(/img/FondoWeb2.png);
+    background-repeat: no-repeat;   /*No se repite la imagen*/
+    background-size: cover;         /*Cubre toda la pantalla*/
+    background-position: center;    /*Centra la imagen*/
+}
+.automatizacion1, .habilitacionventas1, .compromisoventas1, .inteligenciaartificial1, .herramientas1{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: stretch;             /*Hace que las cajas sean todas igual de altas*/
+    padding: 40px;
+    gap: 25px;
+}
+
+.cajas1, .cajas11{
+    display: flex;
+    align-items: center;
+    text-align: left;
+    justify-content: space-evenly;
+    padding: 12px;    
+}
+.cajas1>div, .cajas11>div{          /*Todos los div que sean hijos directos de cajas1, en caso de tener otro div dentro no aplica, en este caso va bien porque las quiero todas iguales */
+    padding: 2px;
+    max-width: 350px;                 /* ancho maximo de las cajas, Haciendolo asi se hace responsive automaticamente ya que se adapta a las unidades puesta*/
+    min-width: 300px;                 /*ancho minimo de las cajas*/
+}
+/*---------------------------------------------------------------------Seria lo mismo pero con los id de cada caja-------------------------------------------------------------------------------------*/
+/*#ventas1, #libro1, #procesos1{
+    padding: 2px;
+    max-width: 350px;
+   min-width: 300px;
+}*/
+/*--------------------------------------------------------------------------------------Imagenes-------------------------------------------------------------------------------------------------------*/
+section img{
+    height: 100px;
+}
+h2{
+    font-size: 2em;
+}
+/*------------------------------------------------------------------------------------Footer---------------------------------------------------------------------------------------------------*/
+footer{
+    background-color: #161C2D;
+    display: flex;
+    flex-direction: column;
+    color: white;
+    padding: 2em;
+}
+.footerarriba1 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    p{
+        padding:0.5em;
+    }   
+}
+.contacto1 img{
+    width: 28px;
+    cursor: pointer;
+}
+.apps1 img{
+    cursor: pointer;
+}
+.footerabajo1{
+    border-top: solid rgba(211,211,211,0.3);
+    margin-top: 2em;
+    padding: 3em 2em 2em 2em;
+    text-align: center;
+}
+.boton1{
+    padding: 1em 2em ;
+    border-radius: 8px;
+    background-color: #161C2D;
+    border-color: white;
+    color: white;
+    font-size: 1em;;
+    &:hover{
+        cursor: pointer;
+        background-color:rgb(17, 196, 11) ;
+        color: black;
+    }
+}
+footer a{
+    text-decoration: none;
+    color: white;
+}
+
+
+@media only screen and (min-width: 600px){ /*Tablet*/
+header img{
+    width: 80px;
+}
+.cajas1, .cajas11 {
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.cajas1 > div, .cajas11 > div {
+     flex: 1 1 45%; /* 2 por fila */
+}
+#logo {
+    width: 10px;
+    align-items: center;
+    height: px
+}
+
+} 
+
+@media only screen and (max-width: 600px){ /*movil*/
+nav {
+  flex-direction: column;
+  align-items: center;
+}
+nav div {
+  flex-direction: column;
+  gap: 0.5em;
+}
+.cajas1, .cajas11 {
+  flex-direction: column;
+  align-items: center;
+}
+.cajas1 > div, .cajas11 > div {
+  width: 90%;
+}
+.footerarriba1 {
+  flex-direction: column;
+  text-align: center;
+  gap: 1em;
+}
+#logo {
+    width: 10px;
+    justify-content: left;
+    height: 10px
+}
+header{
+    position: relative;
+    top:0;
+}
+}
